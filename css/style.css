@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Paleta de variáveis*/
+
+:root {
+    --cor-texto: #000000;
+    --cor-texto2: #ffffff;
+    --cor-btnHover: #5BC0F8;
+    --cor-fundo: #E8E8E8;
+    --cor-btn: #0078AA;
+    --cor-hover: #FED049;
+    --cor-text: #ECF9FF;
+    --dark: #00235B;
+    --dark-article: #184886;
+
+}
+
+.cabecalho {
+    background-color: var(--cor-btnHover);
+    padding: 20px 10px;
+
+}
+
+.cabecalho div {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+
+}
+
+.bi-list {
+    font-size: 25px;
+    color: var(--cor-texto2);
+    display: none;
+}
+
+.bi {
+    font-size: 18px;
+    color: var(--cor-text);
+    cursor: pointer;
+
+}
+
+#muda {
+    display: none;
+}
+
+.bi-brightness-high {
+    display: none;
+}
+
+.check {
+    position: absolute;
+    /*colocando margin do lado direito para movimentar o icone*/
+    right: 35px;
+}
+
+.navegacao {
+    display: inline-block;
+    vertical-align: 30px;
+}
+
+.navegacao ul {
+    list-style: none;
+}
+
+.navegacao ul li {
+    display: inline-block;
+    margin-right: 50px;
+
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: var(--cor-texto2);
+    font-size: 20px;
+}
+
+.navegacao a :hover {
+    color: var(--cor-hover);
+    cursor: pointer;
+}
+
+.navegacao li :hover {
+    color: var(--cor-hover);
+    transition: .6s;
+    font-size: 25px;
+}
+
+.main {
+    color: var(--cor-text);
+    height: 450px;
+    padding: 50px 0;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../img/banner2.jpg);
+
+}
+
+.center {
+    height: 100%;
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre {
+    max-width: 50%;
+}
+
+.sobre h1 {
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 20px;
+    line-height: 1.7;
+    /* text-align: justify; */
+}
+
+.formulario {
+    width: 50%;
+    background-color: #258cb8;
+    border-radius: 8px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.inputs {
+    padding: 10px 30px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, .2);
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-cadastrar {
+    background-color: var(--cor-btn);
+    color: var(--cor-fundo);
+    padding: 15px 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-style: none;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, .2);
+
+}
+
+.btn-cadastrar:hover {
+    background-color: var(--cor-btnHover);
+    color: var(--cor-text);
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, .2);
+    border: 1px solid white;
+    font-size: 18px;
+}
+
+.services {
+    padding: 70px 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services article {
+    width: 20%;
+    height: 65vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #5BC0F8; */
+}
+
+.services article h2 {
+    margin: 10px 0;
+}
+
+.services article p {
+    line-height: 1.5em;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.article-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 80%;
+    background-size: cover;
+    background-position: center;
+}
+
+.services .img1 {
+    background-image: url(../img/Gestao-de-estoque-eficiente.jpg);
+    margin-bottom: 2em;
+}
+
+.services .img2 {
+    background-image: url(../img/transporte.jpg);
+    margin-bottom: 2em;
+}
+
+.services .img3 {
+    background-image: url(../img/implementacao_tec.jpg);
+    margin-bottom: 2em;
+}
+
+.services .img4 {
+    background-image: url(../img/controle_perdas.jpg);
+    margin-bottom: 2em;
+}
+
+.footer {
+    padding: 10px;
+    background-color: var(--cor-btnHover);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer div {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*DARK MODE*/
+
+.dark {
+    background-color: var(--dark-article);
+    color: var(--cor-texto2);
+}
+
+.dark .cabecalho {
+    background-color: var(--dark);
+}
+
+.dark .bi-moon-fill {
+    display: none;
+}
+
+.dark .bi-brightness-high {
+    display: block;
+    color: var(--cor-texto2);
+}
+
+.dark .formulario {
+    background-color: var(--dark);
+}
+
+.dark .footer {
+    background-color: var(--dark);
+}
+
+.dark .btn-cadastrar {
+    background-color: var(--cor-hover);
+    color: var(--dark);
+    box-shadow: 5px 5px 3px rgba(211, 211, 211, 0.2);
+}
+
+.dark .btn-cadastrar:hover {
+    background-color: var(--cor-btn);
+    color: var(--cor-texto2);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .cabecalho div {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+
+    .navegacao ul li {
+        margin-right: 70px;
+    }
+
+    .center {
+        padding: 20px;
+    }
+
+    .formulario {
+        width: 45%;
+    }
+
+    .services article {
+        width: 48%;
+        margin-bottom: 40px;
+    }
+
+    /*  .oculta{
+        display: none;
+    } */
+
+
+}
+
+@media screen and (max-width: 780px) {
+
+    .cabecalho div {
+        flex-direction: column;
+    }
+
+    .navegacao ul li {
+        display: block;
+    }
+
+    .services article {
+        width: 60%;
+    }
+
+    .main {
+        height: 85vh;
+        align-items: center;
+    }
+
+    .center {
+        display: block;
+
+    }
+
+    .sobre {
+        max-width: 100%;
+    }
+
+    .sobre p {
+        margin-bottom: 30px;
+
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .oculta {
+        display: none;
+    }
+
+    .bi-list {
+        display: block;
+    }
+
+}
